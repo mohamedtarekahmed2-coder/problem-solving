@@ -1,25 +1,25 @@
 #include <iostream>
 using namespace std;
-void fast_io()
+void Fast_IO()
 {
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
 }
 
-void solve()
+void Solve()
 {
 
 }
 
 int main()
 {
-    fast_io();
+    Fast_IO();
 
     int test_cases = 1;
     // cin >> test_cases;
     while (test_cases--)
     {
-        solve();
+        Solve();
     }
 
     return 0;
