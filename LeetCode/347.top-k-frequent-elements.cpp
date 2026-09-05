@@ -14,10 +14,29 @@ class Solution
 public:
     vector<int> topKFrequent(vector<int> &nums, int k)
     {
-        unordered_map<int, int> hash_map_freq;
-        vector<vector<int>> freq_buckets(nums.size() + 1);
-        vector<int> answer(k, 0);
+        unordered_map<int, int> hash_map;
+        for (int &num : nums)
+        {
+            hash_map[num]++;
+        }
 
+        vector<vector<int>> buckets(nums.size() + 1);
+        for (auto pair : hash_map)
+        {
+            buckets[pair.second].push_back(pair.first);
+        }
+
+        vector<int> answer;
+        for (int i = (int)buckets.size() - 1; i > 0; i--)
+        {
+            for (int j : buckets[i])
+            {
+                answer.push_back(j);
+                if (answer.size() == k)
+                    return answer;
+            }
+        }
+        return answer;
     }
 };
 // @lc code=end
