@@ -1,5 +1,7 @@
 #include <iostream>
 #include <vector>
+#include <algorithm>
+#include <unordered_map>
 using namespace std;
 /*
  * @lc app=leetcode id=36 lang=cpp
@@ -8,11 +10,12 @@ using namespace std;
  */
 
 // @lc code=start
-class Solution {
+class Solution
+{
 public:
-    bool isValidSudoku(vector<vector<char>>& board) {
+    bool isValidSudoku(vector<vector<char>> &board)
+    {
         
     }
 };
 // @lc code=end
-
