@@ -7,12 +7,14 @@
             "args": [
                 "-fdiagnostics-color=always",
                 "-g",
+                "-O3",
+                "-fopenmp",
                 "${file}",
                 "-o",
                 "${fileDirname}\\${fileBasenameNoExtension}.exe",
-                "-std=c++20", 
-                "-Wall",       
-                "-Wextra"      
+                "-std=c++20",
+                "-Wall",
+                "-Wextra"
             ],
             "options": {
                 "cwd": "${fileDirname}"
